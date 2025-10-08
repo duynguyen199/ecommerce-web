@@ -1,4 +1,5 @@
 import React from "react";
+import IconSearch from "../../assets/icon/IconSearch";
 
 type Props = {
   color?: string;
@@ -6,17 +7,9 @@ type Props = {
   height?: string;
   placeholder: string;
   bgColor?: string;
-  text: string;
 };
 
-const SearchBar = ({
-  color,
-  width,
-  height,
-  placeholder,
-  bgColor,
-  text,
-}: Props) => {
+const SearchBar = ({ color, width, height, placeholder, bgColor }: Props) => {
   return (
     <div>
       <form className="max-w-md mx-auto">
@@ -26,26 +19,22 @@ const SearchBar = ({
         >
           Search
         </label>
-        <div className={`flex items-center  `}>
-          <svg
-            className="w-[24px] h-[24px] text-rgba(0, 0, 0, 0.4) "
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 20 20"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-            />
-          </svg>
+        <div className={`flex items-center relative  `}>
+          <div className="absolute left-[16px]  ">
+            {" "}
+            <IconSearch />
+          </div>
           <input
             type="search"
             id="default-search"
-            className={`w-[${width}] h-[${height}]  ps-2 text-sm  bg-${bgColor}  rounded-lg  text-${color} `}
+            style={{
+              background: bgColor,
+              width,
+              height,
+              color,
+              borderRadius: 62,
+            }}
+            className={` text-sm rounded-lg px-12  `}
             placeholder={placeholder}
             required
           />

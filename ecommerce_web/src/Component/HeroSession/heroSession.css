@@ -1,0 +1,70 @@
+.hero-title {
+  line-height: 64px;
+}
+@media (max-width: 768px) {
+  .hero-title {
+    line-height: normal;
+  }
+}
+.hero-subtitle {
+  font-weight: 400;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.quantity-ads {
+  font-weight: 700;
+}
+.description-ads {
+  font-weight: 400;
+  line-height: 22px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.stat-item {
+  padding-right: 64px;
+}
+
+.stat-item:not(:last-child) {
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  /* Vertical line on the right of each item except the last one */
+  margin-right: 32px;
+}
+
+.hero-session-left {
+  background-image: url("../../assets/img/herro-session.jpg"); /* Path to your image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-size: 75%;
+  background-position: 50% 0%;
+}
+@media (max-width: 1260px) {
+  .hero-session-left {
+    background-image: url("../../assets/img/herro-session.jpg"); /* Path to your image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-size: 80%; /* Ensures the image covers the container */
+    background-position: 50% 15%;
+  }
+}
+
+@media ( max-width: 1200px) and (min-width: 1024px){
+  .hero-session-left {
+    background-image: url("../../assets/img/herro-session.jpg"); /* Path to your image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-size: 100%; /* Ensures the image covers the container */
+    background-position: 50% 40%  }
+}
+@media ( max-width: 1023px) {
+  .hero-session-left {
+    background-image: url("../../assets/img/herro-session.jpg"); /* Path to your image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-size: 39%;
+    background-position: 53% 30%;
+  }
+}
+
+@media ( max-width: 1477px) and (min-width: 1201px){
+  .hero-session-left {
+    background-image: url("../../assets/img/herro-session.jpg");
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: 50% 50%;
+  }
+}

@@ -1,11 +1,6 @@
-@import "tailwindcss";
-
-
-.header-ad{
-    letter-spacing: 400;
-    font-size: 14px;
-
+.header-ad {
+  letter-spacing: 0.4px; /* or adjust as needed */
 }
-.icon-card{
-    margin-right:10px
+.icon-card {
+  margin-right: 10px;
 }
