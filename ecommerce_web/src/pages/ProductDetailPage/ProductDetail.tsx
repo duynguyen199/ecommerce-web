@@ -1,18 +1,19 @@
-import React from 'react'
-import ProductList from '../../Component/SellingPage/ProductList'
-import  { arrNewArrivals, topSellingArr } from '../../data/ProductDetailData'
+import React from "react";
+import ProductList from "../SellingPage/ProductList";
+import { arrNewArrivals, topSellingArr } from "../../data/ProductDetailData";
+import BrowseStyle from "../../Component/BrowseStyle/BrowseStyle";
 
-type Props = {}
+type Props = {};
 
 const ProductDetail = (props: Props) => {
-
   return (
     <div>
-      <ProductList title='New Arrivals' products={arrNewArrivals}/>
-      <ProductList title="Top Selling" products={topSellingArr}/>
-
+      <ProductList title="New Arrivals"  />
+      <ProductList title="Top Selling"  />
+      <BrowseStyle/>
+      
     </div>
-  )
-}
+  );
+};
 
-export default ProductDetail
+export default ProductDetail;

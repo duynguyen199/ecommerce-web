@@ -38,7 +38,7 @@ const HomePageHeader = (props: Props) => {
         </div>
       </div>
 
-      <div className="flex py-6 items-center w-full justify-between md:justify-around px-[20px] md:px-8  ">
+      <div className="flex py-6 items-center w-full fixed   justify-between md:justify-around px-[20px] md:px-8  ">
         <p className="text-green font-bold text-[25px] md:text-[40px] pr-[40px] ">
           SHOP.CO
         </p>

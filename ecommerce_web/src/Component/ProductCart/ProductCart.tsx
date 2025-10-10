@@ -1,10 +1,7 @@
 import React from "react";
-
 import StarRating from "../Star/StarRating";
-import ButtonSubmit from "../Button/ButtonSubmit";
 
 type Props = {
-  title: string;
   products: Product[];
 };
 type Product = {
@@ -16,13 +13,9 @@ type Product = {
   originalPrice: number;
 };
 
-const ProductList: React.FC<Props> = ({ title, products }: Props) => {
+export const ProductCart = ({ products }: Props) => {
   return (
     <div>
-      <h1 className="text-black uppercase text-center text-[48px] mt-10 mb-6">
-        {title}
-      </h1>
-
       <div className="flex flex-wrap flex-row justify-center w-full gap-6">
         {products.map((item) => {
           const discount = Math.round(
@@ -75,20 +68,6 @@ const ProductList: React.FC<Props> = ({ title, products }: Props) => {
           );
         })}
       </div>
-
-      <div className="text-center mb-[64px] mt-[36px]">
-        <ButtonSubmit
-          text="View All"
-          textColor="black"
-          bgColor="#0000001A"
-          width="218px"
-          height="52px"
-          bRadius="62px"
-        />
-      </div>
-      <hr className="w-[80%] mx-[auto]  text-[#0000001A]" />
     </div>
   );
 };
-
-export default ProductList;
