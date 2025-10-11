@@ -38,20 +38,23 @@ const HomePageHeader = (props: Props) => {
         </div>
       </div>
 
-      <div className="flex py-6 items-center w-full fixed   justify-between md:justify-around px-[20px] md:px-8  ">
-        <p className="text-green font-bold text-[25px] md:text-[40px] pr-[40px] ">
+      <div className="fixed top-0 left-0 w-full bg-[#F9F9F9] z-50 flex items-center justify-between md:justify-around py-6 px-[20px] md:px-8 shadow-sm">
+        {/* Logo */}
+        <p className="text-green font-bold text-[25px] md:text-[40px] pr-[40px]">
           SHOP.CO
         </p>
-        <ul className="hidden lg:flex ">
-          {arr.map((item) => {
-            return (
-              <li className=" px-[24px] " key={item.id}>
-                {item.name}
-              </li>
-            );
-          })}
+
+        {/* Nav Menu */}
+        <ul className="hidden lg:flex">
+          {arr.map((item) => (
+            <li className="px-[24px] cursor-pointer" key={item.id}>
+              {item.name}
+            </li>
+          ))}
         </ul>
-        <div className="px-[10x] hidden lg:hidden md:block xl:block ">
+
+        {/* Search Bar */}
+        <div className="hidden md:block">
           <SearchBar
             bgColor="#F0F0F0"
             width="577px"
@@ -61,8 +64,8 @@ const HomePageHeader = (props: Props) => {
           />
         </div>
 
-        <div className="flex items-center justify-space-between">
-          {" "}
+        {/* Icons */}
+        <div className="flex items-center gap-3">
           <IconCard className="icon-card" />
           <IconProfile />
         </div>
