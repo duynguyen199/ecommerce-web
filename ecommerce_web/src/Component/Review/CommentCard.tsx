@@ -3,9 +3,9 @@ import React from 'react';
 import StarRating from '../Star/StarRating';
 
 interface CommentCardProps {
-  name: string;
-  rating: number; // 0 to 5, compatible with StarRating
-  comment: string;
+  name?: string;
+  rating?: number ; // 0 to 5, compatible with StarRating
+  comment?: string;
   verified?: boolean; // Optional prop for verified badge
 }
 
@@ -13,7 +13,7 @@ const CommentCard: React.FC<CommentCardProps> = ({ name, rating, comment, verifi
   return (
     <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 border border-gray-200">
       <div className="flex items-center mb-4">
-        <StarRating rating={rating} total={5} showNumber={false} />
+        <StarRating rating={rating ?? 0} total={5} showNumber={false} />
       </div>
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center">
