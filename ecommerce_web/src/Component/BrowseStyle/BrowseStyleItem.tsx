@@ -13,7 +13,10 @@ export const BrowseStyleItem: React.FC<BrowseStyleItemProps> = ({
   width,
 }) => {
   return (
-    <div className={`relative overflow-hidden h-[450px] rounded-2xl ${width}`}>
+    <div
+    className={`relative overflow-hidden h-[250px] sm:h-[350px] lg:h-[450px] rounded-2xl ${width} 
+    w-full sm:${width}`} // ensures mobile is full width
+  >
       <img
         src={img}
         alt={title}
